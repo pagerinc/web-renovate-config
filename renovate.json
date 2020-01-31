@@ -8,7 +8,8 @@
   "stabilityDays": 2,
   "packageRules": [
     {
-      "packageNames": ["cerebral", "^@cerebral/"],
+      "packageNames": ["cerebral"],
+      "packagePatterns": ["^@cerebral/"],
       "groupSlug": "cerebral",
       "groupName": "cerebral monorepo"
     },
@@ -23,9 +24,8 @@
     {
       "description": "Auto update non-major safe web dependencies",
       "updateTypes": ["minor", "patch", "pin", "digest"],
+      "packagePatterns": ["^@fortawesome/", "^@sentry/", "^lodash."],
       "packageNames": [
-        "^@fortawesome/",
-        "^@sentry/",
         "axios",
         "mixpanel-browser",
         "moment",
@@ -33,7 +33,6 @@
         "twilio-video",
         "vue",
         "vuex",
-        "^lodash.",
         "react",
         "react-dom",
         "react-redux",
@@ -51,8 +50,11 @@
     }
   ],
   "timezone": "America/New_York",
-  "schedule": ["after 9pm and before 8am on every weekday", "every weekend"],
+  "schedule": ["after 9pm and before 7am on every weekday", "every weekend"],
   "commitMessageSuffix": "🤖",
-  "assignees": ["alexruzzarin"],
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "reviewers": ["team:pagerinc/frontend"],
+  "encrypted": {
+    "npmrc": "e38bIkRz+X3IVUf0L74mW9IU0GHUYg1wylt1imc3WgGL0RwsHjjuUlhYKcKr/796q16Is9NVKoCf6dI9mPSEB39ytIX8/KqzS/lIkfzRp9AYQL1vz3Ip40tCkmnJ8NZz4g3QTeuGgafSdMEMK/1oAVk/ILMuy6rrz/Rl/a7Pv/A8JoJ11CnNm6EVilWUgBlZZ+ywC1E0pCt9GnBRWU/dES6l6uyyyp7ccdF9jyQEG/jZa1LinkKZy5IW/qhnOK7u9n1YBk+5+d5VyDy/sv/BfDEZp0w+9L1bkBhx8pj+ZLUpi55bEs+pp0P5yAIARw4Pv3c8q9BKBFLitaRTOr2ZRQ=="
+  }
 }
