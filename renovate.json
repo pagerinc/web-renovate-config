@@ -1,19 +1,57 @@
 {
+  "description": "Pager configuration for web projects",
   "extends": [
-    "config:js-app",
-    ":skipStatusChecks"
+    "github>pagerinc/renovate-config",
+    ":pinAllExceptPeerDependencies"
   ],
-  "patch": {
-    "automerge": true
-  },
+  "branchPrefix": "renovate/",
+  "stabilityDays": 2,
   "packageRules": [
     {
-      "packagePatterns": ["^cerebral", "^@cerebral/"],
+      "packageNames": ["cerebral", "^@cerebral/"],
       "groupSlug": "cerebral",
       "groupName": "cerebral monorepo"
+    },
+    {
+      "description": "Auto update non-major Pager dependencies hosted at jFrog Artifactory",
+      "packagePatterns": ["^@pgr/"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "pager",
+      "stabilityDays": 0,
+      "automerge": true
+    },
+    {
+      "description": "Auto update non-major safe web dependencies",
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "packageNames": [
+        "^@fortawesome/",
+        "^@sentry/",
+        "axios",
+        "mixpanel-browser",
+        "moment",
+        "socket.io-client",
+        "twilio-video",
+        "vue",
+        "vuex",
+        "^lodash.",
+        "react",
+        "react-dom",
+        "react-redux",
+        "redux",
+        "styled-components",
+        "styled-normalize"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Auto update patch safe web dependencies",
+      "updateTypes": ["patch", "pin", "digest"],
+      "packageNames": ["redux-saga", "react-router-dom", "reselect"],
+      "automerge": true
     }
   ],
   "timezone": "America/New_York",
+  "schedule": ["after 9pm and before 8am on every weekday", "every weekend"],
   "commitMessageSuffix": "🤖",
   "assignees": ["alexruzzarin"],
   "labels": ["dependencies"]
