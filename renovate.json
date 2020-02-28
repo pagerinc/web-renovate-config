@@ -1,23 +1,34 @@
 {
   "description": "Pager configuration for web projects",
   "extends": [
-    "github>pagerinc/renovate-config",
-    ":pinAllExceptPeerDependencies"
+    "config:js-app",
+    ":automergePatch",
+    ":prHourlyLimit4",
+    ":prConcurrentLimit10",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":semanticCommits"
   ],
-  "branchPrefix": "renovate/",
-  "stabilityDays": 2,
   "packageRules": [
     {
-      "packageNames": ["cerebral"],
-      "packagePatterns": ["^@cerebral/"],
-      "groupSlug": "cerebral",
-      "groupName": "cerebral monorepo"
+      "groupName": "cerebral monorepo",
+      "description": "cerebral monorepo",
+      "sourceUrlPrefixes": [
+        "https://github.com/cerebral/cerebral"
+      ]
     },
     {
-      "description": "Auto update non-major Pager dependencies hosted at jFrog Artifactory",
-      "packagePatterns": ["^@pgr/"],
+      "groupName": "rollup plugins monorepo",
+      "description": "rollup plugins monorepo",
+      "sourceUrlPrefixes": [
+        "https://github.com/rollup/plugins"
+      ]
+    },
+    {
+      "description": "Auto update non-major Pager dependencies",
+      "packagePatterns": ["^@pgr/", "^@pager/"],
       "updateTypes": ["minor", "patch", "pin", "digest"],
       "groupName": "pager",
+      "schedule": "at any time",
       "stabilityDays": 0,
       "automerge": true
     },
@@ -49,6 +60,7 @@
       "automerge": true
     }
   ],
+  "stabilityDays": 1,
   "timezone": "America/New_York",
   "schedule": ["after 9pm and before 7am on every weekday", "every weekend"],
   "commitMessageSuffix": "🤖",
