@@ -65,7 +65,7 @@
   "schedule": ["after 9pm and before 7am on every weekday", "every weekend"],
   "commitMessageSuffix": "🤖",
   "labels": ["dependencies"],
-  "reviewers": ["team:pagerinc/frontend"],
+  "reviewers": ["team:frontend"],
   "encrypted": {
     "npmrc": "e38bIkRz+X3IVUf0L74mW9IU0GHUYg1wylt1imc3WgGL0RwsHjjuUlhYKcKr/796q16Is9NVKoCf6dI9mPSEB39ytIX8/KqzS/lIkfzRp9AYQL1vz3Ip40tCkmnJ8NZz4g3QTeuGgafSdMEMK/1oAVk/ILMuy6rrz/Rl/a7Pv/A8JoJ11CnNm6EVilWUgBlZZ+ywC1E0pCt9GnBRWU/dES6l6uyyyp7ccdF9jyQEG/jZa1LinkKZy5IW/qhnOK7u9n1YBk+5+d5VyDy/sv/BfDEZp0w+9L1bkBhx8pj+ZLUpi55bEs+pp0P5yAIARw4Pv3c8q9BKBFLitaRTOr2ZRQ=="
   }
