@@ -12,16 +12,12 @@
     {
       "groupName": "cerebral monorepo",
       "description": "cerebral monorepo",
-      "sourceUrlPrefixes": [
-        "https://github.com/cerebral/cerebral"
-      ]
+      "sourceUrlPrefixes": ["https://github.com/cerebral/cerebral"]
     },
     {
       "groupName": "rollup plugins monorepo",
       "description": "rollup plugins monorepo",
-      "sourceUrlPrefixes": [
-        "https://github.com/rollup/plugins"
-      ]
+      "sourceUrlPrefixes": ["https://github.com/rollup/plugins"]
     },
     {
       "description": "Auto update non-major Pager dependencies",
@@ -40,6 +36,7 @@
         "axios",
         "mixpanel-browser",
         "moment",
+        "@types/socket.io-client",
         "socket.io-client",
         "twilio-video",
         "vue",
@@ -56,7 +53,17 @@
     {
       "description": "Auto update patch safe web dependencies",
       "updateTypes": ["patch", "pin", "digest"],
-      "packageNames": ["redux-saga", "react-router-dom", "reselect"],
+      "packageNames": [
+        "redux-saga",
+        "react-router-dom",
+        "reselect",
+        "typed-event-emitter"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Auto update dev dependencies",
+      "depTypeList": ["devDependencies"],
       "automerge": true
     }
   ],
