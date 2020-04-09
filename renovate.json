@@ -36,8 +36,6 @@
         "axios",
         "mixpanel-browser",
         "moment",
-        "@types/socket.io-client",
-        "socket.io-client",
         "twilio-video",
         "vue",
         "vuex",
