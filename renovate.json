@@ -63,6 +63,17 @@
       "description": "Auto update dev dependencies",
       "depTypeList": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
     }
   ],
   "stabilityDays": 1,
