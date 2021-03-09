@@ -27,7 +27,7 @@ Or, in `package.json` of the project, add the following section:
 Useful links:
 - [Renovate Shareable Config Presets][presets]
 - [Renovate Default Presets][defaultpresets]
-- [Renovate Configuration Options][presets]
+- [Renovate Configuration Options][options]
 
 [presets]: https://renovatebot.com/docs/config-presets
 [defaultpresets]: https://docs.renovatebot.com/presets-default
