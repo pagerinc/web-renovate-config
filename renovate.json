@@ -64,9 +64,8 @@
       "matchDepTypes": ["devDependencies"],
       "automerge": true,
       "updateTypes": [
-        "minor", 
-        "patch", 
-        "pin", 
+        "patch",
+        "pin",
         "digest"
       ]
     },
